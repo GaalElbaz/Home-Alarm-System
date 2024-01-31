@@ -1,0 +1,15 @@
+`timescale 1ns / 1ps
+////////////////////////////////////////////////////////////////////////////////// 
+// Module Name: home_alarm_system
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module home_alarm_system(
+    input [3:0] sw,
+    input enable,
+    output logic led
+    );
+    
+    assign led =  (sw[0] | sw[1] | sw[2] | sw[3]) & enable;
+endmodule
